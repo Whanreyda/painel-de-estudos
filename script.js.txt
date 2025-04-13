@@ -1,0 +1,26 @@
+// script.js
+
+// Função para alternar entre modo claro e escuro
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
+const progressoTexto = document.getElementById('progressoTexto');
+const barraProgresso = document.getElementById('barraProgresso');
+const materiasList = document.getElementById('materiasList');
+
+// Alterna entre modo escuro e claro
+darkModeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  if (body.classList.contains('dark-mode')) {
+    darkModeToggle.innerText = '☀️ Modo Claro';
+  } else {
+    darkModeToggle.innerText = '🌙 Modo Escuro';
+  }
+});
+
+// Atualiza o progresso do checklist
+materiasList.addEventListener('change', () => {
+  const totalMaterias = materiasList.children.length;
+  const materiasConcluidas = Array.from(materiasList.children).filter(li => li.querySelector('input').checked).length;
+  barraProgresso.value = materiasConcluidas;
+  progressoTexto.innerText = `${materiasConcluidas} de ${totalMaterias} matérias concluídas`;
+});
