@@ -1,55 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Painel de Estudos EFOMM</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Estudos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Painel de Estudos - EFOMM</h1>
-    <button id="darkModeToggle">🌙 Modo Escuro</button>
-  </header>
+    <header>
+        <h1>Painel de Estudos para EFOMM</h1>
+        <button id="dark-mode-toggle">Alternar Modo Escuro</button>
+    </header>
 
-  <main>
-    <section class="checklist">
-      <h2>Checklist de Matérias</h2>
-      <ul id="materiasList">
-        <li><input type="checkbox" /> Matemática Básica</li>
-        <li><input type="checkbox" /> Matemática 1</li>
-        <li><input type="checkbox" /> Matemática 2</li>
-        <li><input type="checkbox" /> Matemática 3</li>
-        <li><input type="checkbox" /> Física 1</li>
-        <li><input type="checkbox" /> Física 2</li>
-        <li><input type="checkbox" /> Física 3</li>
-        <li><input type="checkbox" /> Gramática</li>
-        <li><input type="checkbox" /> Redação</li>
-        <li><input type="checkbox" /> Inglês</li>
-      </ul>
-    </section>
+    <main>
+        <div class="study-card">
+            <h2>Matemática Básica</h2>
+            <progress value="50" max="100"></progress>
+            <p>Progresso: 50%</p>
+        </div>
+        <div class="study-card">
+            <h2>Física 1</h2>
+            <progress value="30" max="100"></progress>
+            <p>Progresso: 30%</p>
+        </div>
+        <div class="study-card">
+            <h2>Redação</h2>
+            <progress value="70" max="100"></progress>
+            <p>Progresso: 70%</p>
+        </div>
 
-    <section class="progresso">
-      <h2>Progresso</h2>
-      <progress id="barraProgresso" value="0" max="10"></progress>
-      <p id="progressoTexto">0 de 10 matérias concluídas</p>
-    </section>
+        <div class="study-card">
+            <h2>Inglês</h2>
+            <progress value="40" max="100"></progress>
+            <p>Progresso: 40%</p>
+        </div>
+    </main>
 
-    <section class="simulados">
-      <h2>Simulados</h2>
-      <p>Acompanhe seu desempenho semanal e mensal nos simulados.</p>
-      <ul>
-        <li>Simulado 1 - <strong>Resultado:</strong> 65%</li>
-        <li>Simulado 2 - <strong>Resultado:</strong> 72%</li>
-        <!-- Você pode adicionar mais aqui -->
-      </ul>
-    </section>
-  </main>
+    <footer>
+        <p>&copy; 2025 Painel de Estudos | Criado com ❤️</p>
+    </footer>
 
-  <footer>
-    <p>Desenvolvido por Whanreyda</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
